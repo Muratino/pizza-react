@@ -1,0 +1,38 @@
+.pagination {
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    &__item {
+        .selected {
+            a {
+                background-color: #fe5f1e;
+                color: #fff;
+            }
+        }
+        li { display: inline-block;    
+            a {
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                margin: 0 5px;
+                border: 1px solid #fe5f1e;
+                border-radius: 30px;
+                cursor: pointer;
+                color: #fe5f1e;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background-color: #fe5f1e;
+                    color: #fff;
+                }
+
+            }
+        }
+    }
+
+}
