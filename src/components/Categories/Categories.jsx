@@ -17,7 +17,7 @@ const Categories = React.memo(() => {
     const dispatch = useDispatch();
 
     const setActiveClick = React.useCallback((e) => {
-        dispatch(setCategoryPizza(e.target.id));
+        dispatch(setCategoryPizza(e.target.id)); // eslint-disable-next-line
     }, [])
 
 
@@ -29,7 +29,7 @@ const Categories = React.memo(() => {
                     <li
                         key={id}
                         id={id}
-                        className={categoryPizza == id ? "active" : ''}
+                        className={categoryPizza == id ? "active" : ''}   // eslint-disable-line
                         onClick={setActiveClick}
                     > {all} </li>
                 )

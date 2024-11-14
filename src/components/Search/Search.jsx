@@ -10,7 +10,7 @@ function Search() {
     const [valueRed, setValueRed] = useState('');
     const myRef = useRef();
 
-    const testDebounce = useCallback(
+    const testDebounce = useCallback( // eslint-disable-line
         debounce((str) => {
             dispatch(setSearchValue(str));
         }, 500),

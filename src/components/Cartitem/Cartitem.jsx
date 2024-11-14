@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct, minusElem, removeProduct } from '../redux/Slice/cartsSlice';
-import clsx from 'clsx';
+// import clsx from 'clsx'; 
 
 function Cartitem({ id, price, title, type, count, sizes, imageUrl }) {
 
@@ -17,10 +17,10 @@ function Cartitem({ id, price, title, type, count, sizes, imageUrl }) {
         dispatch(minusElem(id));
 
     }
-
-    const onRemove = () => {
-        if (window.confirm('Вы уверены, что хотите удалить?')) {
-            dispatch(removeProduct(id));
+ 
+    const onRemove = () => {   
+        if (window.confirm('Вы уверены, что хотите удалить?')) { 
+            dispatch(removeProduct(id)); 
         }
     }
 

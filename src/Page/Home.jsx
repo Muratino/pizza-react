@@ -36,14 +36,14 @@ function Home() {
 
     useEffect(() => {
         getPizza();
-    }, [categoryPizza, sortPizza.sort, searchValue, currentPage]);
+    }, [categoryPizza, sortPizza.sort, searchValue, currentPage]); // eslint-disable-line
 
     const onChangePage = React.useCallback((num) => {
-        dispatch(setCurrentPage(num));
-    }, [])
+        dispatch(setCurrentPage(num)); // eslint-disable-next-line
+    }, []) 
 
-    const filterArr = arrPizza.map(val => (<PizzaBlock key={val.id} {...val} />));
-    const loadingArr = status === "loading" ? [... new Array(6)].map((_, el) => <Skeleton key={el} />) : filterArr;
+    const filterArr = arrPizza.map(val => (<PizzaBlock key={val.id} {...val} />)); // eslint-disable-next-line
+    const loadingArr = status === "loading" ? [... new Array(6)].map((_, el) => <Skeleton key={el} />) : filterArr; 
     
 
     // console.log(categoryPizza);

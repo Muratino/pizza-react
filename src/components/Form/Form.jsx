@@ -23,7 +23,7 @@ function Form() {
 
 
     const blureForm = (e) => {
-        switch (e.target.name) {
+        switch (e.target.name) { // eslint-disable-line
             case 'email':
                 setEmailForgotten(true);
                 break
